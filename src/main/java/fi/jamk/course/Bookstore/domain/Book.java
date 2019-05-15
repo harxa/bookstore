@@ -1,13 +1,41 @@
 package fi.jamk.course.Bookstore.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
     private String title;
     private String author;
     private Integer year;
     private String isbn;
     private Float price;
     
-	public String getTitle() {
+    public Book() {}
+    
+	public Book(String title, String author, Integer year, String isbn, Float price) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.year = year;
+		this.isbn = isbn;
+		this.price = price;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+    
+    public String getTitle() {
 		return title;
 	}
 
