@@ -12,13 +12,13 @@ public class Book {
 	private long id;
     private String title;
     private String author;
-    private Integer year;
+    private String year;
     private String isbn;
-    private Float price;
+    private String price;
     
     public Book() {}
     
-	public Book(String title, String author, Integer year, String isbn, Float price) {
+	public Book(String title, String author, String year, String isbn, String price) {
 		super();
 		this.title = title;
 		this.author = author;
@@ -51,11 +51,11 @@ public class Book {
 		this.author = author;
 	}
 	
-	public Integer getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(Integer year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 	
@@ -67,11 +67,11 @@ public class Book {
 		this.isbn = isbn;
 	}
 	
-	public Float getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(Float price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 }

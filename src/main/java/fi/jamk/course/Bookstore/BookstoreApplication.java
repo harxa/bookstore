@@ -18,8 +18,8 @@ public class BookstoreApplication {
 	@Bean
 	public CommandLineRunner demoAdd(BookRepository repository) {
 		return(args) ->{
-			Book b1 = new Book ("Isku Ytimeen", "Ilkka Remes", 2002, "1234567890", (float) 23.95);
-			Book b2 = new Book ("Shokkiaalto", "Ilkka Remes", 2001, "1234567880", (float) 21.55);
+			Book b1 = new Book ("Isku Ytimeen", "Ilkka Remes", "2002", "1234567890", "23.95");
+			Book b2 = new Book ("Shokkiaalto", "Ilkka Remes", "2001", "1234567880", "21.55");
 			
 			repository.save(b1);
 			repository.save(b2);
