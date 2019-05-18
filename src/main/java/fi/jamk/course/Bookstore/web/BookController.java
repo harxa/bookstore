@@ -33,6 +33,12 @@ public class BookController {
         return "booklist";
     }
     
+    @RequestMapping(value="/book/{id}", method=RequestMethod.GET)
+    public String oneBook(@PathVariable("id") Long bookId, Model model) {
+    	model.addAttribute("books", repository.findById(bookId));
+        return "booklist";
+    }
+    
     @RequestMapping(value = "/add")
     public String addBook(Model model){
     	model.addAttribute("book", new Book());
