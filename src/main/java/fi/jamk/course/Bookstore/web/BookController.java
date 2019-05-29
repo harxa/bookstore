@@ -22,7 +22,12 @@ public class BookController {
 	@Autowired
 	private CategoryRepository crepository; 
 	
-    @RequestMapping(value="/index", method=RequestMethod.GET)
+	@RequestMapping(value="/login")
+    public String login() {	
+        return "login";
+	} 
+	
+	@RequestMapping(value="/index", method=RequestMethod.GET)
     public String greetings(Model model) {
         return "index";
     }
